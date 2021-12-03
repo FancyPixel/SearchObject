@@ -13,7 +13,7 @@ module SearchObject
         @page     = [options[:page].to_i, 0].max
         @per_page = self.class.calculate_per_page options[:per_page]
 
-        super options
+        super object: options[:object], context: options[:context], field: options[:field]
       end
 
       private
